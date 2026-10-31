@@ -53,7 +53,7 @@ export function NodeGraph({ states, pulseKey, pulsing }: Props) {
 
         <Node x={ROOT.x} y={30} root label="Stripe Webhook" sub="payment_intent.succeeded" />
         {BRANCHES.map((b, i) => (
-          <Node key={b.key} x={XS[i]} y={LEAF_Y} label={b.label} state={states[b.key]} />
+          <Node key={b.key} x={XS[i] ?? 0} y={LEAF_Y} label={b.label} state={states[b.key]} />
         ))}
       </div>
     </div>
