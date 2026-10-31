@@ -9,7 +9,7 @@ export function AuditDrawer({ row, onClose }: { row: AuditRow | null; onClose: (
       {row && (
         <>
           <motion.div
-            className="fixed inset-0 z-40 bg-foreground/20"
+            className="fixed inset-0 z-40 bg-background/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

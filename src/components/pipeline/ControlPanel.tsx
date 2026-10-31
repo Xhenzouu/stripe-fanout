@@ -27,10 +27,10 @@ export function ControlPanel({ toggles, onToggle, onProcess, running }: Props) {
               aria-checked={toggles[key]}
               onClick={() => onToggle(key)}
               disabled={running}
-              className={`relative h-5 w-9 rounded-full transition-colors ${toggles[key] ? "bg-failed" : "bg-input"}`}
+              className={`relative h-5 w-9 shrink-0 rounded-full p-0 transition-colors ${toggles[key] ? "bg-failed" : "bg-input"}`}
             >
               <span
-                className={`absolute top-0.5 h-4 w-4 rounded-full bg-card shadow-sm transition-transform ${toggles[key] ? "translate-x-4" : "translate-x-0.5"}`}
+                className={`absolute left-0 top-0.5 h-4 w-4 rounded-full bg-card shadow-sm transition-transform ${toggles[key] ? "translate-x-4" : "translate-x-0.5"}`}
               />
             </button>
             Force {label} Fail
